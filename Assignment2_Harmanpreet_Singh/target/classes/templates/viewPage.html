@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" media="all" th:href="@{/css/View.css}">
+</head>
+<body>
+<h1>View Page</h1>
+<table >
+<tr>
+<th>ID</th>
+<th>Ticket NAME</th>
+<th>Address:</th>
+<th>Age</th>
+<th>Full Name:</th>
+<th>Phone no:</th>
+<th>Gaurdian's name:</th>
+<th>Movie Of Interest:</th>
+</tr>
+<tr th:each="d:${ticket}">
+<td th:text="${d.id}"></td>
+<td th:text="${d.ticket_name}"></td>
+<td th:text="${d.main1}"></td>
+<td th:text="${d.amount1}"></td>
+<td th:text="${d.main2}"></td>
+<td th:text="${d.amount2}"></td>
+<td th:text="${d.directions}"></td>
+<td th:text="${d.genre}"></td>
+<td><a th:href="@{/edit/{id}(id=${d.id})}"><button class="rainbow">EDIT</button></a></td>
+<td><a th:href="@{/delete/{id}(id=${d.id})}"><button class="rainbow">DELETE</button></a></td>
+</table>
+<a href="/add"><button>add page</button></a><br>
+<a href="/"><button>home page</button></a>
+</body>
+</html>

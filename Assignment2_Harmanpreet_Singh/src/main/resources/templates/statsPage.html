@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" media="all" th:href="@{/css/stats.css}">
+</head>
+<body>
+<h2>Tickets Sold for Cars</h2>
+<table>
+<tr>
+<th>ID</th>
+<th>Ticket NAME</th>
+<th>Address:</th>
+<th>Age</th>
+<th>Full Name:</th>
+<th>Phone no:</th>
+<th>Gaurdian's name:</th>
+<th>Movie Of Interest:</th>
+</tr>
+<tr th:each="d:${tickets}">
+<td th:text="${d.id}"></td>
+<td th:text="${d.ticket_name}"></td>
+<td th:text="${d.main1}"></td>
+<td th:text="${d.amount1}"></td>
+<td th:text="${d.main2}"></td>
+<td th:text="${d.amount2}"></td>
+<td th:text="${d.directions}"></td>
+<td th:text="${d.genre}"></td>
+</tr>
+</table>
+<h2>Tickets sold for Wall E</h2>
+<table>
+<tr>
+<th>ID</th>
+<th>Ticket NAME</th>
+<th>Address:</th>
+<th>Age</th>
+<th>Full Name:</th>
+<th>Phone no:</th>
+<th>Gaurdian's name:</th>
+<th>Movie Of Interest:</th>
+</tr>
+<tr th:each="d:${Walltickets}">
+<td th:text="${d.id}"></td>
+<td th:text="${d.ticket_name}"></td>
+<td th:text="${d.main1}"></td>
+<td th:text="${d.amount1}"></td>
+<td th:text="${d.main2}"></td>
+<td th:text="${d.amount2}"></td>
+<td th:text="${d.directions}"></td>
+<td th:text="${d.genre}"></td>
+</tr>
+</table>
+<h2>Tickets sold for COCO</h2>
+<table>
+<tr>
+<th>ID</th>
+<th>Ticket NAME</th>
+<th>Address:</th>
+<th>Age</th>
+<th>Full Name:</th>
+<th>Phone no:</th>
+<th>Gaurdian's name:</th>
+<th>Movie Of Interest:</th>
+</tr>
+<tr th:each="d:${COCOtickets}">
+<td th:text="${d.id}"></td>
+<td th:text="${d.ticket_name}"></td>
+<td th:text="${d.main1}"></td>
+<td th:text="${d.amount1}"></td>
+<td th:text="${d.main2}"></td>
+<td th:text="${d.amount2}"></td>
+<td th:text="${d.directions}"></td>
+<td th:text="${d.genre}"></td>
+</tr>
+</table>
+<h2>Tickets sold for Tangled</h2>
+<table>
+<tr>
+<th>ID</th>
+<th>Ticket NAME</th>
+<th>Address:</th>
+<th>Age</th>
+<th>Full Name:</th>
+<th>Phone no:</th>
+<th>Gaurdian's name:</th>
+<th>Movie Of Interest:</th>
+</tr>
+<tr th:each="d:${Tangledtickets}">
+<td th:text="${d.id}"></td>
+<td th:text="${d.ticket_name}"></td>
+<td th:text="${d.main1}"></td>
+<td th:text="${d.amount1}"></td>
+<td th:text="${d.main2}"></td>
+<td th:text="${d.amount2}"></td>
+<td th:text="${d.directions}"></td>
+<td th:text="${d.genre}"></td>
+</tr>
+</table>
+<h2>Tickets Sold for other movies</h2>
+<table>
+<tr>
+<th>ID</th>
+<th>Ticket NAME</th>
+<th>Address:</th>
+<th>Age</th>
+<th>Full Name:</th>
+<th>Phone no:</th>
+<th>Gaurdian's name:</th>
+<th>Movie Of Interest:</th>
+</tr>
+<tr th:each="d:${Othertickets}">
+<td th:text="${d.id}"></td>
+<td th:text="${d.ticket_name}"></td>
+<td th:text="${d.main1}"></td>
+<td th:text="${d.amount1}"></td>
+<td th:text="${d.main2}"></td>
+<td th:text="${d.amount2}"></td>
+<td th:text="${d.directions}"></td>
+<td th:text="${d.genre}"></td>
+</tr>
+</table>
+<p align = 'center'><a href="/add"><button class="button button2">Add Ticket</button></a></p>
+<p align = 'center'><a href="/viewPage"><button class="button button2">View Ticket</button></a><p align = 'center'>
+<p align = 'center'><a href="/stats"><button class="button button2">Show Stats</button></a><p align = 'center'>
+</body>
+</html>

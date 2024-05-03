@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" media="all" th:href="@{/css/Add.css}">
+</head>
+<body>
+<h1>Add Page</h1>
+<div sec:authorize="isAuthenticated()">
+<form th:action="@{/addPage}" method="GET" th:object="${ticket}"><br>
+Ticket Name:<input type="text" class="type" th:field="*{ticket_name}"><br><br>
+Address:<input type="text" class="type" th:field="*{main1}"><br><br>
+Age:<input type="number"   th:field="*{amount1}"><br><br>
+Full Name:<input type="text" class="type" th:field="*{main2}"><br><br>
+Phone no:<input type="number"  th:field="*{amount2}"><br><br>
+Gaurdian's name:<input type="text" class="type" th:field="*{directions}"><br><br>
+Movie of interest: <select th:field="*{genre}" id="genre">
+<option th:each="c : *{categories}" th:value="${c}" th:text="${c}">
+		</select>
+SUBMIT:<input type="submit" value="add"><br><br>
+</form>
+</div>
+<div class="text-center">
+<a href="/viewPage"><button class="button"><span>View Page</span></button></a><br>
+<a href="/"><button class="button2">Home page</button></a>
+</div>
+</body>
+</html>
